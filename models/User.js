@@ -43,6 +43,16 @@ const UserSchema = new mongoose.Schema(
         },
       },
     ],
+    wallet: {
+  balance: {
+    type: Number,
+    default: 0,
+  },
+  totalEarned: {
+    type: Number,
+    default: 0, // lifetime earnings — never decreases, good for records
+  },
+},
     isActive: {
       type: Boolean,
       default: true,
